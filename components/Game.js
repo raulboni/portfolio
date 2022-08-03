@@ -103,21 +103,18 @@ function Game() {
 
   return (
     <>
-      <h1
-        className="mb-12  text-center text-xl text-black"
-        onClick={shuffleCards}
-      >
+      <h1 className=" text-black sm:text-lg" onClick={shuffleCards}>
         Play this game to know some facts about me!
       </h1>
-      <div className="flex flex-col justify-center gap-4 md:flex-row">
-        <ul className="items-right flex w-[200px] flex-col gap-4">
+      <div className="flex w-full flex-col gap-6 md:flex-row md:justify-center">
+        <ul className=" flex w-[280px] flex-col gap-4 md:w-[200px]">
           {messages.map((message) => (
             <li
               className="italic text-black opacity-100 transition-opacity duration-300"
               key={message.text}
             >
               <img
-                className="mr-2 inline h-auto w-[30px] invert-[0.3]"
+                className="mr-2 inline h-auto w-[20px] invert-[0.3]"
                 alt="fact icon"
                 src={message.icon}
               />
@@ -126,7 +123,7 @@ function Game() {
           ))}
         </ul>
 
-        <div className=" grid w-[300px] grid-cols-4 grid-rows-2 gap-1 ">
+        <div className="md:indline grid h-[210px] w-[280px] grid-cols-4 grid-rows-2 gap-1">
           {cards.map((card) => (
             <CardGame
               key={card.id}

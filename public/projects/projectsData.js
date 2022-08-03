@@ -3,12 +3,7 @@ export const projects = [
     title: "Grupos Random",
     description: "App that allows teachers to make random groups of students.",
     img: "/projects/grupos-random.png",
-    techs: [
-      "React.js",
-      "CSS-Modules",
-      "Firebase-Firestore",
-      "Firebase-Authentication",
-    ],
+    techs: ["React.js", "CSS Modules", "Firestore", "Firebase Authentication"],
     link: "https://group-randomizer-59197.web.app/",
     github: "https://github.com/raulboni/random-groups",
   },

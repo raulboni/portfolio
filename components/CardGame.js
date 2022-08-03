@@ -6,7 +6,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
   };
 
   return (
-    <div className="relative h-[70px] w-[70px] ">
+    <div className="relative h-[60px] w-[60px] ">
       <img
         className={`absolute h-full w-full border-2  border-black p-4 invert-[.3] ${
           flipped ? "transition-transform" : ""
