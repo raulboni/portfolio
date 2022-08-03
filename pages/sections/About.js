@@ -8,10 +8,14 @@ const About = () => {
   });
 
   return (
-    <div id="about" ref={section} className=" min-h-screen  bg-slate-50 ">
+    <div
+      id="about"
+      ref={section}
+      className=" flex  min-h-screen justify-center bg-slate-50"
+    >
       <div
         ref={section}
-        className={`flex flex-col items-center justify-center gap-8 py-[15vh] px-[15vw] transition-opacity duration-300 ${
+        className={`flex flex-col items-center justify-center gap-8 py-[15vh] px-8 transition-opacity duration-300 lg:w-[50vw] ${
           sectionInView ? "opacity-110" : "opacity-0"
         }`}
       >
