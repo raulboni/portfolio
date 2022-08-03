@@ -1,38 +1,45 @@
+import Image from "next/image";
 const Landing = ({ offsetY }) => {
   return (
     <section className="relative flex h-[100vh] flex-col overflow-hidden">
-      <img
-        src="/landing/sky.jpg"
-        alt="landing-background"
-        className="absolute top-0 z-0 min-h-screen object-cover"
-        style={{
-          transform: `translateY(${offsetY * 1}px)`,
-        }}
-      />
+      <div className="absolute top-0 z-0 scale-[3] lg:scale-100">
+        <Image
+          width="2000px"
+          height="2600px"
+          src="/landing/sky2.jpg"
+          alt="landing-background"
+        ></Image>
+      </div>
 
-      <h1 className="z-10 mt-[30vh] text-center font-sans text-6xl font-bold text-slate-100 transition-opacity duration-300 lg:text-9xl">
+      <h1 className="z-20 mt-[30vh] text-center font-sans text-6xl font-bold text-slate-100 transition-opacity duration-300 lg:text-9xl">
         Raúl Bonilla
         <div className="mt-20 font-mono text-2xl font-thin text-slate-100 lg:text-6xl">
           &lt;Web Developer/&gt;
         </div>
       </h1>
 
-      <img
-        src="/landing/roofs.svg"
-        alt="landing-background"
-        className="absolute top-[70vh] left-0 z-20 min-h-[400px] "
-        style={{
-          transform: `translateY(${offsetY * 0.6}px)`,
-        }}
-      />
-      <img
-        src="/landing/skyline.svg"
-        alt="landing-background"
-        className="absolute top-[80vh] right-0 z-10  min-h-[400px] object-cover"
-        style={{
-          transform: `translateY(${offsetY * 0.8}px)`,
-        }}
-      />
+      <div className="invisible absolute left-0 top-[50vh] z-20 lg:visible">
+        <Image
+          width="700px"
+          height="700px"
+          src="/landing/roofs.svg"
+          alt="landing-background"
+          style={{
+            transform: `translateY(${offsetY * 0.09}vh)`,
+          }}
+        ></Image>
+      </div>
+      <div className="invisible absolute right-0 top-[70vh] z-10 lg:visible">
+        <Image
+          height="500px"
+          width="1500px"
+          src="/landing/skyline.svg"
+          alt="landing-background"
+          style={{
+            transform: `translateY(${offsetY * 0.07}vh)`,
+          }}
+        ></Image>
+      </div>
     </section>
   );
 };

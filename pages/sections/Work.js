@@ -7,7 +7,7 @@ const Work = () => {
   });
 
   return (
-    <section id="work" className="min-h-screen">
+    <section id="work" className="z-30 min-h-screen">
       <div
         ref={section}
         className={`mx-0 flex flex-wrap justify-center gap-4 py-40 px-0 transition-opacity duration-300 ${
