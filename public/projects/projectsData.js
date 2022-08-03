@@ -25,6 +25,6 @@ export const projects = [
     img: "/projects/my-portfolio.svg",
     techs: ["React.js", "Next.js", "API-REST", "Vercel", "Tailwind CSS"],
     link: "/",
-    github: "https://github.com/raulboni/porfolio",
+    github: "https://github.com/raulboni/portfolio",
   },
 ];
