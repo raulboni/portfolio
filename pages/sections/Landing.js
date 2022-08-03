@@ -21,14 +21,14 @@ const Landing = ({ offsetY }) => {
         </div>
       </h1>
 
-      <div className="invisible absolute left-0 top-[50vh] z-20 lg:visible">
+      <div className="invisible absolute left-0 top-[55vh] z-20 lg:visible">
         <Image
           width="700px"
           height="700px"
           src="/landing/roofs.svg"
           alt="landing-background"
           style={{
-            transform: `translateY(${offsetY * 0.6}px)`,
+            transform: `translateY(${offsetY * 0.4}px)`,
           }}
         ></Image>
       </div>
@@ -39,7 +39,7 @@ const Landing = ({ offsetY }) => {
           src="/landing/skyline.svg"
           alt="landing-background"
           style={{
-            transform: `translateY(${offsetY * 0.8}px)`,
+            transform: `translateY(${offsetY * 0.6}px)`,
           }}
         ></Image>
       </div>
