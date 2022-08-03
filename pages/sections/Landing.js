@@ -23,7 +23,7 @@ const Landing = ({ offsetY }) => {
 
       <div className="invisible absolute left-0 top-[55vh] z-20 lg:visible">
         <Image
-          width="700px"
+          width="800px"
           height="700px"
           src="/landing/roofs.svg"
           alt="landing-background"
@@ -34,8 +34,8 @@ const Landing = ({ offsetY }) => {
       </div>
       <div className="invisible absolute right-0 top-[70vh] z-10 lg:visible">
         <Image
-          height="500px"
-          width="1500px"
+          height="800px"
+          width="3000px"
           src="/landing/skyline.svg"
           alt="landing-background"
           style={{
