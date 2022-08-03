@@ -2,12 +2,15 @@ import Image from "next/image";
 const Landing = ({ offsetY }) => {
   return (
     <section className="relative flex h-[100vh] flex-col overflow-hidden">
-      <div className="absolute top-0 z-0 scale-[3] lg:scale-100">
+      <div className="absolute top-[-10vh] z-0 scale-[3] lg:scale-100">
         <Image
           width="2000px"
           height="2600px"
           src="/landing/sky2.jpg"
           alt="landing-background"
+          style={{
+            transform: `translateY(${offsetY * 1}px)`,
+          }}
         ></Image>
       </div>
 
@@ -25,7 +28,7 @@ const Landing = ({ offsetY }) => {
           src="/landing/roofs.svg"
           alt="landing-background"
           style={{
-            transform: `translateY(${offsetY * 0.09}vh)`,
+            transform: `translateY(${offsetY * 0.6}px)`,
           }}
         ></Image>
       </div>
@@ -36,7 +39,7 @@ const Landing = ({ offsetY }) => {
           src="/landing/skyline.svg"
           alt="landing-background"
           style={{
-            transform: `translateY(${offsetY * 0.07}vh)`,
+            transform: `translateY(${offsetY * 0.8}px)`,
           }}
         ></Image>
       </div>
