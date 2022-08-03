@@ -27,6 +27,11 @@ const icons = [
     src: "/tech-icons/firebase.png",
     link: "https://firebase.google.com/",
   },
+  {
+    id: "git",
+    src: "/tech-icons/git.png",
+    link: "https://git-scm.com/",
+  },
 ];
 
 export default icons;

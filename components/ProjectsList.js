@@ -10,13 +10,15 @@ const ProjectsList = () => {
           key={p.title}
           className="flex h-[480px] w-full flex-col items-center justify-center gap-8 bg-slate-900 p-8 text-white sm:w-[500px]"
         >
-          <h2 className="w-full text-xl">{p.title}</h2>
+          <h2 className="w-full font-mono text-xl tracking-wide sm:text-2xl">
+            {p.title}
+          </h2>
           <div className="flex w-full items-center justify-between gap-2">
             <div className="w-[60%] text-start">
-              <p>{p.description}</p>
+              <p className="opacity-60">{p.description}</p>
               <br></br>
               {p.techs.map((p) => (
-                <span className="font-mono" key={p}>
+                <span className="pr-4 font-mono" key={p}>
                   {" "}
                   {p}
                 </span>

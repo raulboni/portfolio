@@ -10,7 +10,7 @@ const Work = () => {
     <section id="work" className="min-h-screen">
       <div
         ref={section}
-        className={`mx-0 flex flex-wrap items-center justify-center gap-4 py-40 px-0 transition-opacity duration-300 ${
+        className={`mx-0 flex flex-wrap justify-center gap-4 py-40 px-0 transition-opacity duration-300 ${
           sectionInView ? "opacity-100" : "opacity-0"
         }`}
       >

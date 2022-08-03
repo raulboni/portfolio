@@ -20,17 +20,17 @@ const cardImages = [
   {
     src: "/game/music.svg",
     matched: false,
-    message: "My main hobbie is playing guitar",
+    message: "I play guitar and drums",
   },
   {
     src: "/game/teach.svg",
     matched: false,
-    message: "I feel comfortable speaking in public",
+    message: "I enojoy public speaking",
   },
   {
-    src: "/game/design.svg",
+    src: "/game/hiking.svg",
     matched: false,
-    message: "I'm passionate about coding and web design",
+    message: "I love hiking in the nature",
   },
 ];
 
@@ -102,40 +102,35 @@ function Game() {
   }, []);
 
   return (
-    <>
-      <h1 className=" text-black sm:text-lg" onClick={shuffleCards}>
-        Play this game to know some facts about me!
-      </h1>
-      <div className="flex w-full flex-col gap-6 md:flex-row md:justify-center">
-        <ul className=" flex w-[280px] flex-col gap-4 md:w-[200px]">
-          {messages.map((message) => (
-            <li
-              className="italic text-black opacity-100 transition-opacity duration-300"
-              key={message.text}
-            >
-              <img
-                className="mr-2 inline h-auto w-[20px] invert-[0.3]"
-                alt="fact icon"
-                src={message.icon}
-              />
-              <p className="inline">{message.text}</p>
-            </li>
-          ))}
-        </ul>
-
-        <div className="md:indline grid h-[210px] w-[280px] grid-cols-4 grid-rows-2 gap-1">
-          {cards.map((card) => (
-            <CardGame
-              key={card.id}
-              card={card}
-              handleChoice={handleChoice}
-              flipped={card === choiceOne || card === choiceTwo || card.matched}
-              disabled={disabled}
+    <div className="flex w-full flex-col gap-6 md:flex-row md:justify-center">
+      <ul className=" flex flex-col gap-4">
+        {messages.map((message) => (
+          <li
+            className="italic text-black opacity-100 transition-opacity duration-300"
+            key={message.text}
+          >
+            <img
+              className="mr-2 inline h-auto w-[20px] invert-[0.3]"
+              alt="fact icon"
+              src={message.icon}
             />
-          ))}
-        </div>
+            <p className="inline">{message.text}</p>
+          </li>
+        ))}
+      </ul>
+
+      <div className="md:indline grid h-[210px] w-[280px] grid-cols-4 grid-rows-2 gap-1">
+        {cards.map((card) => (
+          <CardGame
+            key={card.id}
+            card={card}
+            handleChoice={handleChoice}
+            flipped={card === choiceOne || card === choiceTwo || card.matched}
+            disabled={disabled}
+          />
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
