@@ -19,7 +19,7 @@ const About = () => {
           sectionInView ? "opacity-110" : "opacity-0"
         }`}
       >
-        <p className="w-full text-black sm:text-lg">
+        <p className="w-full text-center text-black sm:text-start sm:text-lg">
           I&apos;m Raúl Bonilla Lobo, a frontend web developer. I like building
           nice-looking and functional web applications that make the world a
           better place. These are some of my skills:
@@ -37,7 +37,7 @@ const About = () => {
           ))}
         </div>
         <br></br>
-        <p className="w-full text-black sm:text-lg">
+        <p className="w-full text-center text-black sm:text-start sm:text-lg">
           Play this memory game if you want to know more about me!
         </p>
 

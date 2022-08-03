@@ -102,7 +102,7 @@ function Game() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col gap-6 md:flex-row md:justify-center">
+    <div className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center">
       <ul className=" flex flex-col gap-4">
         {messages.map((message) => (
           <li
