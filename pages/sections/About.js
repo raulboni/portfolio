@@ -23,9 +23,10 @@ const About = () => {
 
         <div className="flex w-full flex-wrap justify-evenly gap-4">
           {icons.map((icon) => (
-            <a key={icon.id} href={icon.link} target="_blank">
+            <a key={icon.id} href={icon.link} target="_blank" rel="noreferrer">
               <img
                 src={icon.src}
+                alt="skill icon"
                 className="h-[35px]  transition-transform duration-300 hover:scale-125 sm:max-h-[60px]"
               />
             </a>

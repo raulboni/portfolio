@@ -25,7 +25,7 @@ const ProjectsList = () => {
               ))}
             </div>
             <Image
-              className="shadow-2xl"
+              alt="project image"
               src={p.img}
               height="250px"
               width="125px"
@@ -37,6 +37,7 @@ const ProjectsList = () => {
               <a
                 className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
                 target="_blank"
+                rel="noreferrer"
                 href={p.link}
               >
                 Project
@@ -46,6 +47,7 @@ const ProjectsList = () => {
               <a
                 className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
                 target="_blank"
+                rel="noreferrer"
                 href={p.github}
               >
                 Code
