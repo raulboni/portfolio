@@ -16,7 +16,7 @@ const About = () => {
         }`}
       >
         <p className="w-full text-black sm:text-lg">
-          I'm Raúl Bonilla Lobo, a frontend web developer. I like building
+          I&apos;m Raúl Bonilla Lobo, a frontend web developer. I like building
           nice-looking and functional web applications that make the world a
           better place. These are some of my skills:
         </p>
