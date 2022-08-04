@@ -2,7 +2,7 @@ import Image from "next/image";
 const Landing = ({ offsetY }) => {
   return (
     <section className="relative flex h-[100vh] flex-col overflow-hidden">
-      <div className="absolute top-[-10vh] z-0 scale-[3] lg:scale-100">
+      <div className="invisible absolute top-[-10vh] z-0 md:visible">
         <Image
           width="2000px"
           height="2600px"
@@ -11,6 +11,15 @@ const Landing = ({ offsetY }) => {
           style={{
             transform: `translateY(${offsetY * 1}px)`,
           }}
+        ></Image>
+      </div>
+
+      <div className="absolute scale-[2.5] md:invisible">
+        <Image
+          width="2000px"
+          height="2600px"
+          src="/landing/sky2.jpg"
+          alt="landing-background"
         ></Image>
       </div>
 

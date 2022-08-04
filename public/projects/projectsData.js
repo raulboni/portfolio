@@ -23,7 +23,7 @@ export const projects = [
     description:
       "Website that shows projects and info to potential empoyers and includes a simple game to make it more dynamic.",
     img: "/projects/my-portfolio.svg",
-    techs: ["React.js", "Next.js", "API-REST", "Vercel", "Tailwind CSS"],
+    techs: ["React.js", "Next.js", "Vercel", "Tailwind CSS"],
     link: "/",
     github: "https://github.com/raulboni/portfolio",
   },
