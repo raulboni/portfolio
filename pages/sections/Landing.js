@@ -5,7 +5,7 @@ const Landing = ({ offsetY }) => {
     <section className="relative flex h-screen flex-col overflow-hidden">
       <div className="absolute z-10 h-[100vh] w-[100vw]">
         <Image
-          placeholder={() => <div style={{ backgroundColor: "black" }} />}
+          placeholder={() => <div style={{ backgroundColor: "darkblue" }} />}
           width="1931px"
           height="3433px"
           src="/landing/sky16-9.jpg"
