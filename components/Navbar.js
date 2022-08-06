@@ -4,7 +4,7 @@ const Navbar = ({ workInView, aboutInView, contactInView, landingInView }) => {
   console.log(landingInView, workInView, aboutInView, contactInView);
   return (
     <nav
-      className={`fixed inset-x-0 z-50 flex justify-center gap-5 p-6 font-mono text-2xl sm:text-3xl
+      className={`fixed inset-x-0 z-50 flex justify-center gap-5 p-6 font-mono text-lg sm:text-3xl
         ${workInView && !landingInView ? " bg-black" : "bg-transparent"}
         ${aboutInView && !workInView ? "bg-slate-100 text-black" : ""}
         `}

@@ -15,7 +15,7 @@ const ProjectsList = () => {
           </h2>
           <div className="flex w-full items-center justify-between gap-2">
             <div className="w-[60%] text-start">
-              <p className="opacity-60">{p.description}</p>
+              <p className="hidden opacity-60 md:block">{p.description}</p>
               <br></br>
               {p.techs.map((p) => (
                 <span className="pr-4 font-mono" key={p}>
