@@ -7,16 +7,16 @@ const Work = () => {
   });
 
   return (
-    <section id="work" className="z-30 min-h-screen">
+    <div id="work" className="z-30 flex min-h-screen justify-center">
       <div
         ref={section}
-        className={`mx-0 flex flex-wrap justify-center gap-4 py-40 px-0 transition-opacity duration-300 ${
+        className={`jusfity-center flex max-w-[60rem] flex-col gap-6 py-[12vh] px-4 transition-opacity duration-300 ${
           sectionInView ? "opacity-100" : "opacity-0"
         }`}
       >
         <ProjectsList />
       </div>
-    </section>
+    </div>
   );
 };
 

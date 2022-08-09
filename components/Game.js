@@ -25,7 +25,7 @@ const cardImages = [
   {
     src: "/game/teach.svg",
     matched: false,
-    message: "I enojoy public speaking",
+    message: "I enjoy public speaking",
   },
   {
     src: "/game/hiking.svg",
@@ -102,7 +102,7 @@ function Game() {
   }, []);
 
   return (
-    <div className="flex w-full flex-col items-center gap-6 md:flex-row md:justify-center">
+    <div className="flex w-full flex-col items-center gap-6 rounded bg-slate-300 p-6 md:flex-row md:items-start md:justify-evenly">
       <ul className=" flex flex-col gap-4">
         {messages.map((message) => (
           <li

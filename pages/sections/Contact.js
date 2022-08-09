@@ -19,15 +19,18 @@ const Contact = () => {
   }
 
   return (
-    <div id="contact" className=" min-h-screen ">
+    <div
+      id="contact"
+      className=" flex min-h-screen items-center justify-center"
+    >
       <div
         ref={section}
-        className={`flex flex-col items-center justify-center gap-10 p-10 py-40 px-20 transition-opacity duration-300 ${
+        className={` flex max-w-[60rem] flex-col gap-10 py-[12vh] transition-opacity duration-300 ${
           sectionInView ? "opacity-100" : "opacity-0"
         }
       }`}
       >
-        <p className="text-center">
+        <p className="text-center md:text-2xl">
           Send me an email to{" "}
           <CopyToClipboard text={contactData.email}>
             <span
@@ -40,8 +43,8 @@ const Contact = () => {
             </span>
           </CopyToClipboard>
         </p>
-        <p className="text-center">Find me on</p>
-        <div className="flex gap-4">
+        <p className="text-center md:text-2xl">Find me on</p>
+        <div className="flex justify-center gap-4">
           <a href={contactData.linkedin} target="_blank" rel="noreferrer">
             <img
               className="max-h-[40px]  transition-transform duration-300 hover:scale-125 sm:max-h-[60px]"

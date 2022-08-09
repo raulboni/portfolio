@@ -2,6 +2,7 @@ import { useInView } from "react-intersection-observer";
 import icons from "../../public/tech-icons/iconsData";
 import Game from "../../components/Game";
 import Image from "next/image";
+import profilePic from "../../public/yo.png";
 
 const About = () => {
   const { ref: section, inView: sectionInView } = useInView({
@@ -15,13 +16,18 @@ const About = () => {
       className=" flex  min-h-screen justify-center bg-slate-50"
     >
       <div
-        ref={section}
-        className={`flex flex-col items-center justify-center gap-8 py-[15vh] px-8 transition-opacity duration-300 lg:w-[50vw] ${
+        className={`flex max-w-[60rem] flex-col items-center justify-center gap-6 py-[12vh] px-4 transition-opacity duration-300 md:gap-12 ${
           sectionInView ? "opacity-110" : "opacity-0"
         }`}
       >
-        <Image width="150px" height="150px" src="/yo.png"></Image>
-        <div className="w-full text-center text-black sm:text-start sm:text-xl">
+        <Image
+          placeholder="blur"
+          width="150px"
+          height="150px"
+          className="rounded-full"
+          src={profilePic}
+        ></Image>
+        <div className="w-full text-center text-black sm:text-2xl">
           <p>
             I&apos;m Raúl Bonilla Lobo, a frontend web developer. I like
             building nice-looking and functional web applications. These are
@@ -35,14 +41,15 @@ const About = () => {
               <img
                 src={icon.src}
                 alt="skill icon"
-                className="h-[35px]  transition-transform duration-300 hover:scale-125 sm:max-h-[60px]"
+                className="h-[35px]  transition-transform duration-300 hover:scale-125 sm:h-[70px]"
               />
             </a>
           ))}
         </div>
         <br></br>
-        <p className="w-full text-center text-black sm:text-start sm:text-xl">
-          Play this memory game if you want to know more about me!
+        <p className="w-full text-center text-black sm:text-2xl">
+          <span className=" font-extrabold">Know me more</span> by playing this
+          game!
         </p>
 
         <Game />

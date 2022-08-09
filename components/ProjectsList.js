@@ -8,9 +8,9 @@ const ProjectsList = () => {
       {projects.map((p) => (
         <div
           key={p.title}
-          className="flex h-[480px] w-full flex-col items-center justify-center gap-8 bg-slate-900 p-8 text-white sm:w-[500px]"
+          className="flex w-full flex-col items-center justify-center gap-8 bg-slate-900 p-8 text-white"
         >
-          <h2 className="w-full font-mono text-xl tracking-wide sm:text-2xl">
+          <h2 className="w-full text-center font-mono text-xl tracking-wide sm:text-2xl">
             {p.title}
           </h2>
           <div className="flex w-full items-center justify-between gap-2">

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 import About from "./sections/About";
@@ -40,24 +41,30 @@ export default function Home() {
 
   return (
     <>
-      <Navbar
-        landingInView={landingInView}
-        workInView={workInView}
-        aboutInView={aboutInView}
-        contactInView={contactInView}
-      />
-      <div ref={landing}>
+      <Head>
+        <title>Raul Bonilla</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <header>
+        <Navbar
+          landingInView={landingInView}
+          workInView={workInView}
+          aboutInView={aboutInView}
+          contactInView={contactInView}
+        />
+      </header>
+      <section ref={landing}>
         <Landing offsetY={offsetY} />
-      </div>
-      <div ref={work}>
+      </section>
+      <section ref={work}>
         <Work />
-      </div>
-      <div ref={about}>
+      </section>
+      <section ref={about}>
         <About />
-      </div>
-      <div ref={contact}>
+      </section>
+      <section ref={contact}>
         <Contact />
-      </div>
+      </section>
     </>
   );
 }
