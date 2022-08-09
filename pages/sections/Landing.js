@@ -16,7 +16,6 @@ const Landing = ({ offsetY }) => {
     }
   }, []);
 
-  console.log(starsPosition[0]);
   return (
     <section className="relative flex h-screen flex-col overflow-hidden">
       <div className="absolute z-10 flex h-[100vh] w-screen flex-wrap justify-evenly bg-slate-900">
@@ -33,18 +32,6 @@ const Landing = ({ offsetY }) => {
           </div>
         ))}
       </div>
-      {/* <div className="absolute z-10 h-[100vh] w-[100vw]">
-        <Image
-          placeholder={() => <div style={{ backgroundColor: "darkblue" }} />}
-          width="1931px"
-          height="3433px"
-          src="/landing/sky16-9.jpg"
-          alt="landing-background"
-          style={{
-            transform: `translateY(${offsetY * 1}px)`,
-          }}
-        ></Image>
-      </div> */}
 
       <h1 className="z-20 mt-[30vh] text-center font-sans text-4xl font-bold text-slate-100 transition-opacity duration-300 md:text-8xl">
         Raúl Bonilla
