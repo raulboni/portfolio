@@ -1,9 +1,39 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 const Landing = ({ offsetY }) => {
-  console.log(offsetY);
+  const [starsPosition, setStarsPosition] = useState([]);
+
+  useEffect(() => {
+    for (let i = 0; i < 30; i++) {
+      setStarsPosition((prev) => [
+        {
+          key: Math.random(),
+          x: Math.ceil(Math.random() * 10),
+          y: Math.ceil(Math.random() * 10),
+        },
+        ...prev,
+      ]);
+    }
+  }, []);
+
+  console.log(starsPosition[0]);
   return (
     <section className="relative flex h-screen flex-col overflow-hidden">
-      <div className="absolute z-10 h-[100vh] w-[100vw]">
+      <div className="absolute z-10 flex h-[100vh] w-screen flex-wrap justify-evenly bg-slate-900">
+        {starsPosition.map((s) => (
+          <div key={s.key} className="h-[10vh] w-[10vw]">
+            <div
+              className={`relative h-[2px] w-[2px] bg-slate-50`}
+              style={{
+                top: `${s.y}vh`,
+                left: `${s.x}vw`,
+                transform: `translateY(${offsetY * 1}px)`,
+              }}
+            ></div>
+          </div>
+        ))}
+      </div>
+      {/* <div className="absolute z-10 h-[100vh] w-[100vw]">
         <Image
           placeholder={() => <div style={{ backgroundColor: "darkblue" }} />}
           width="1931px"
@@ -14,7 +44,7 @@ const Landing = ({ offsetY }) => {
             transform: `translateY(${offsetY * 1}px)`,
           }}
         ></Image>
-      </div>
+      </div> */}
 
       <h1 className="z-20 mt-[30vh] text-center font-sans text-4xl font-bold text-slate-100 transition-opacity duration-300 md:text-8xl">
         Raúl Bonilla

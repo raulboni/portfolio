@@ -1,6 +1,7 @@
 import { useInView } from "react-intersection-observer";
 import icons from "../../public/tech-icons/iconsData";
 import Game from "../../components/Game";
+import Image from "next/image";
 
 const About = () => {
   const { ref: section, inView: sectionInView } = useInView({
@@ -19,11 +20,14 @@ const About = () => {
           sectionInView ? "opacity-110" : "opacity-0"
         }`}
       >
-        <p className="w-full text-center text-black sm:text-start sm:text-lg">
-          I&apos;m Raúl Bonilla Lobo, a frontend web developer. I like building
-          nice-looking and functional web applications that make the world a
-          better place. These are some of my skills:
-        </p>
+        <Image width="150px" height="150px" src="/yo.png"></Image>
+        <div className="w-full text-center text-black sm:text-start sm:text-xl">
+          <p>
+            I&apos;m Raúl Bonilla Lobo, a frontend web developer. I like
+            building nice-looking and functional web applications. These are
+            some of my skills:
+          </p>
+        </div>
 
         <div className="flex w-full flex-wrap justify-evenly gap-4">
           {icons.map((icon) => (
@@ -37,7 +41,7 @@ const About = () => {
           ))}
         </div>
         <br></br>
-        <p className="w-full text-center text-black sm:text-start sm:text-lg">
+        <p className="w-full text-center text-black sm:text-start sm:text-xl">
           Play this memory game if you want to know more about me!
         </p>
 
