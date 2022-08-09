@@ -4,7 +4,7 @@ const Landing = ({ offsetY }) => {
   const [starsPosition, setStarsPosition] = useState([]);
 
   useEffect(() => {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 100; i++) {
       setStarsPosition((prev) => [
         {
           key: Math.random(),
