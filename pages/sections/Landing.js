@@ -17,7 +17,7 @@ const Landing = ({ offsetY }) => {
   }, []);
 
   return (
-    <section className="relative flex h-screen flex-col overflow-hidden">
+    <div className="relative flex h-screen flex-col overflow-hidden">
       <div className="absolute z-10 flex h-[100vh] w-screen flex-wrap justify-evenly bg-slate-900">
         {starsPosition.map((s) => (
           <div key={s.key} className="h-[10vh] w-[10vw]">
@@ -66,7 +66,7 @@ const Landing = ({ offsetY }) => {
           ></Image>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
