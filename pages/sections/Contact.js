@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+
 import { useState } from "react";
 
 const Contact = () => {
@@ -32,17 +32,11 @@ const Contact = () => {
       >
         <p className="text-center md:text-2xl">
           Send me an email to{" "}
-          <CopyToClipboard text={contactData.email}>
-            <span
-              className={`cursor-pointer border-b-2 ${
-                copiedMessage && "bg-slate-50 font-mono text-black"
-              }`}
-              onClick={handleClick}
-            >
-              {!copiedMessage ? contactData.email : "copied to clipboard"}
-            </span>
-          </CopyToClipboard>
+          <a className="cursor-pointer" href="mailto:raulbonilla@outlook.com">
+            raulbonilla@outlook
+          </a>
         </p>
+
         <p className="text-center md:text-2xl">Find me on</p>
         <div className="flex justify-center gap-4">
           <a href={contactData.linkedin} target="_blank" rel="noreferrer">
