@@ -48,8 +48,8 @@ const About = () => {
         </div>
         <br></br>
         <p className="w-full text-center text-black sm:text-2xl">
-          <span className=" font-extrabold">Know me more</span> by playing this
-          game!
+          <span className=" font-extrabold">Know more about me</span> by playing
+          this game!
         </p>
 
         <Game />
