@@ -33,26 +33,30 @@ const ProjectsList = () => {
           </div>
 
           <span className="flex w-full justify-end gap-2">
-            <button>
-              <a
-                className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
-                target="_blank"
-                rel="noreferrer"
-                href={p.link}
-              >
-                Project
-              </a>
-            </button>
-            <button>
-              <a
-                className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
-                target="_blank"
-                rel="noreferrer"
-                href={p.github}
-              >
-                Code
-              </a>
-            </button>
+            {p.link && (
+              <button>
+                <a
+                  className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={p.link}
+                >
+                  Project
+                </a>
+              </button>
+            )}
+            {p.github && (
+              <button>
+                <a
+                  className=" bg-slate-50 px-2 py-1 font-mono font-bold text-black hover:bg-black hover:text-slate-50"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={p.github}
+                >
+                  Code
+                </a>
+              </button>
+            )}
           </span>
         </div>
       ))}

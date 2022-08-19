@@ -11,12 +11,8 @@ const Contact = () => {
     email: "raulbonilla@outlook.com",
     linkedin: "https://www.linkedin.com/in/raul-bonilla-lobo",
     github: "https://github.com/raulboni",
+    codepen: "https://codepen.io/raulboni-the-looper/",
   };
-  const [copiedMessage, setCopiedMessage] = useState(false);
-  function handleClick() {
-    setCopiedMessage(true);
-    setTimeout(() => setCopiedMessage(false), 1000);
-  }
 
   return (
     <div
@@ -52,6 +48,13 @@ const Contact = () => {
               className="max-h-[40px]  transition-transform duration-300 hover:scale-125 sm:max-h-[60px]"
               src="/contact-icons/github.png"
               alt="github icon"
+            ></img>
+          </a>
+          <a href={contactData.codepen} target="_blank" rel="noreferrer">
+            <img
+              className="max-h-[40px]  transition-transform duration-300 hover:scale-125 sm:max-h-[60px]"
+              src="/contact-icons/codepen.png"
+              alt="codepen icon"
             ></img>
           </a>
         </div>

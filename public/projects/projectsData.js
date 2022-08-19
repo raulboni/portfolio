@@ -27,4 +27,12 @@ export const projects = [
     link: "/",
     github: "https://github.com/raulboni/portfolio",
   },
+  {
+    title: "JS Calculator",
+    description:
+      "Functional Javascript calculator with four different color themes.",
+    img: "/projects/calculator.svg",
+    techs: ["React.js", "styled-components"],
+    github: "https://github.com/raulboni/js-calculator",
+  },
 ];
